@@ -2,7 +2,7 @@ class kibana3 (
   $elasticsearch_server = $kibana3::params::elasticsearch_server,
   $default_route        = $kibana3::params::default_route,
   $kibana_index         = $kibana3::params::kibana_index,
-){
+) inherits kibana3::params {
 
   package {'kibana3':
     ensure => present;
